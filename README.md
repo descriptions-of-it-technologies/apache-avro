@@ -37,7 +37,7 @@
 
 ## 
 * Avro has schema and has preloaded.
-
+* Don't store secrets in Avro.
 
 
 
@@ -69,6 +69,20 @@
 * There is no need compare performance etc unless you can prove that Avro is indeed a performance roadblock in your programs
   (and that won't happen unless you reach insane volumes of one million messages per second)
 
+
+
+
+## Avro complex types.
+* Enums
+  * Note: once an enum is set, changing the enum values is forbidden if you want to mantain compatibility.
+* Arrays
+* Maps
+* Unions
+  * Unions can allow a field value to take different types.
+  * If defaults are defined, the default must be of the type of the first item in the union.
+  * The most common use for unions is to define an optional value. 
+  * Note: for the default don't write `"null"`, write `null` without quotes.
+* Calling other schemas as type.
 
 
 
