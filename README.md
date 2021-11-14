@@ -2,8 +2,6 @@
 
 
 
-
-
 ## Contents at a Glance.
 * [About.](#about)
 * [Documentation.](#documentation)
@@ -13,11 +11,7 @@
 
 
 
-
-
 ## About.
-
-
 
 
 
@@ -25,13 +19,9 @@
 
 
 
-
-
 ## An evolution of data Avro.
 * Avro is defined by a schema (schema is written in JSON)
 * To get started, you can view Avro as JSON with a schema attached to it.
-
-
 
 
 
@@ -51,13 +41,9 @@
 
 
 
-
-
 ## Cons.
 * Avro support from some languages may be lacking (but the main ones is fine)
 * Can't print the data without using the Avro tools (because is compressed and serialized)
-
-
 
 
 
@@ -69,6 +55,17 @@
 * There is no need compare performance etc unless you can prove that Avro is indeed a performance roadblock in your programs
   (and that won't happen unless you reach insane volumes of one million messages per second)
 
+
+
+## Avro primitive types.
+* null
+* boolean
+* integer 
+* long 
+* bytes
+* string 
+* float
+* double
 
 
 
@@ -83,6 +80,14 @@
   * The most common use for unions is to define an optional value. 
   * Note: for the default don't write `"null"`, write `null` without quotes.
 * Calling other schemas as type.
+
+
+
+## Avro logical types.
+* decimals
+* date 
+* time-millis
+* timestamp-millis
 
 
 
